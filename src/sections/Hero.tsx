@@ -1,12 +1,24 @@
-import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-import { useRef } from 'react'
+import { motion, useInView, useReducedMotion, useScroll, useTransform } from 'motion/react'
+import { useEffect, useRef } from 'react'
 import { Balloons } from '../components/Balloons'
 import { Photo } from '../components/ui'
 import { config, copy, photos } from '../content'
+import { burst } from '../lib/celebrate'
 
-export function Hero({ started }: { started: boolean }) {
+export function Hero() {
   const ref = useRef<HTMLElement>(null)
   const reduced = useReducedMotion()
+  const started = useInView(ref, { once: true, amount: 0.4 })
+
+  // Confetti greets her when the wish scrolls into view, and can never block it.
+  useEffect(() => {
+    if (!started) return
+    try {
+      burst()
+    } catch {
+      // confetti is decoration
+    }
+  }, [started])
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const photoY = useTransform(scrollYProgress, [0, 1], ['0%', '18%'])
   const textY = useTransform(scrollYProgress, [0, 1], ['0%', '-40%'])

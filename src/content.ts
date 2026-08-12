@@ -35,9 +35,9 @@ export const photos = {
 } as const
 
 export const copy = {
-  gate: {
+  intro: {
     kicker: 'psst… something is waiting for you',
-    button: 'Tap to open',
+    cta: 'scroll down',
     hint: 'made entirely for you',
   },
   hero: {
