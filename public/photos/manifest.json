@@ -1,0 +1,67 @@
+{
+  "cutest": {
+    "width": 1600,
+    "height": 1200,
+    "source": "Cutest Bday girl.JPG"
+  },
+  "hero": {
+    "width": 1200,
+    "height": 1600,
+    "source": "First slide of bday.JPG"
+  },
+  "us-1": {
+    "width": 1200,
+    "height": 1600,
+    "source": "IMG_2669.JPG"
+  },
+  "us-2": {
+    "width": 1200,
+    "height": 1600,
+    "source": "IMG_2672.JPG"
+  },
+  "us-3": {
+    "width": 1600,
+    "height": 1200,
+    "source": "IMG_2676.JPG"
+  },
+  "us-4": {
+    "width": 1600,
+    "height": 1200,
+    "source": "IMG_2817.JPG"
+  },
+  "us-5": {
+    "width": 1600,
+    "height": 1200,
+    "source": "IMG_2842.JPG"
+  },
+  "date-ask": {
+    "width": 1600,
+    "height": 900,
+    "source": "Me asking her for date.JPG"
+  },
+  "prettiest": {
+    "width": 1200,
+    "height": 1600,
+    "source": "Prettiest bday girl.JPG"
+  },
+  "sassiest-boy": {
+    "width": 1200,
+    "height": 1600,
+    "source": "Sassiest boy.JPG"
+  },
+  "sassiest-girl": {
+    "width": 1200,
+    "height": 1600,
+    "source": "Sassiest girl for sassiest boy.JPG"
+  },
+  "together": {
+    "width": 736,
+    "height": 1600,
+    "source": "want to be together.PNG"
+  },
+  "date-confirmed": {
+    "width": 1200,
+    "height": 1600,
+    "source": "when she says yes and date confirm.JPG"
+  }
+}
