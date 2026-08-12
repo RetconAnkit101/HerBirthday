@@ -35,6 +35,9 @@ export const photos = {
 } as const
 
 export const copy = {
+  loader: {
+    line: 'getting your surprise ready…',
+  },
   intro: {
     kicker: 'psst… something is waiting for you',
     cta: 'scroll down',

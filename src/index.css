@@ -19,6 +19,13 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Snapping fights flick-scrolling on touch screens and reads as lag, so phones scroll freely. */
+@media (hover: none) {
+  html {
+    scroll-snap-type: none;
+  }
+}
+
 body {
   margin: 0;
   background-color: var(--color-ink);
@@ -53,8 +60,14 @@ body {
 
 .card-glass {
   background: rgba(255, 246, 240, 0.06);
-  backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 246, 240, 0.14);
+}
+
+/* Backdrop blur is the single most expensive effect on a phone GPU, so it is desktop-only. */
+@media (min-width: 640px) {
+  .card-glass {
+    backdrop-filter: blur(14px);
+  }
 }
 
 @keyframes float-up {

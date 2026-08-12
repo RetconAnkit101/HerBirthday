@@ -42,7 +42,10 @@ export function Photo({ src, alt, className = '', imgClassName = '', eager = fal
       <img
         src={src}
         alt={alt}
-        loading={eager ? 'eager' : 'lazy'}
+        // Everything is preloaded before the story starts, so nothing is lazy here:
+        // lazy loading is what made each slide stutter as it came into view.
+        loading="eager"
+        fetchPriority={eager ? 'high' : 'auto'}
         decoding="async"
         onLoad={() => setLoaded(true)}
         className={`h-full w-full object-cover transition-[opacity,transform] duration-[900ms] ease-out ${
